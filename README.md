@@ -69,10 +69,10 @@ dianplus/virgo-jetty-server   3.6.4.RELEASE       0f900c762dcf        5 minutes 
 
 The generated basic images for Virgo are available via [Docker Hub][dockerhub]:
 
- * Virgo Server for Apache Tomcat: https://registry.hub.docker.com/u/dianplus/virgo-tomcat-server/
- * Virgo Jetty Server: https://registry.hub.docker.com/u/dianplus/virgo-jetty-server/
- * Virgo RAP Server: https://registry.hub.docker.com/u/dianplus/virgo-rap-server/
- * Virgo Kernel: https://registry.hub.docker.com/u/dianplus/virgo-kernel/
+ * Virgo Server for Apache Tomcat: https://hub.docker.com/r/dianplus/virgo-tomcat-server/
+ * Virgo Jetty Server: https://hub.docker.com/r/dianplus/virgo-jetty-server/
+ * Virgo RAP Server: https://hub.docker.com/r/dianplus/virgo-rap-server/
+ * Virgo Kernel: https://hub.docker.com/r/dianplus/virgo-kernel/
 
 [Virgo]: http://www.eclipse.org/virgo/ "Virgo"
 [dockerhub]: https://hub.docker.com/ "Docker Hub"
