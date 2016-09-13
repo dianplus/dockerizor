@@ -43,6 +43,17 @@ class DockerizorExtensionTest {
     }
 
     @Test
+    public void shouldSupportMilestoneDownloadOfVirgoKernel() {
+        DockerizorExtension uut = new DockerizorExtension (
+                virgoVersion:'3.7.0.M03',
+                virgoFlavour:'VK'
+                )
+
+        assertThat(uut.downloadUrl, containsString("VK"));
+        assertThat(uut.downloadUrl, containsString("milestone"));
+    }
+
+    @Test
     public void shouldSupport36ReleaseDownloadOfVirgoTomcatServer() {
         DockerizorExtension uut = new DockerizorExtension (
                 virgoVersion:'3.6.4.RELEASE',
@@ -58,6 +69,17 @@ class DockerizorExtensionTest {
         DockerizorExtension uut = new DockerizorExtension (
                 virgoVersion:'3.6.4.RELEASE',
                 virgoFlavour:'VJS'
+                )
+
+        assertThat(uut.downloadUrl, containsString("VP"));
+        assertThat(uut.downloadUrl, containsString("release"));
+    }
+
+    @Test
+    public void shouldSupport36ReleaseDownloadOfVirgoKernel() {
+        DockerizorExtension uut = new DockerizorExtension (
+                virgoVersion:'3.6.4.RELEASE',
+                virgoFlavour:'VK'
                 )
 
         assertThat(uut.downloadUrl, containsString("VP"));
@@ -85,6 +107,18 @@ class DockerizorExtensionTest {
                 )
 
         assertThat(uut.downloadUrl, containsString("VJS"));
+        assertThat(uut.downloadUrl, containsString("release"));
+    }
+
+    @Test
+    @Ignore
+    public void shouldSupport37ReleaseDownloadOfVirgoKernel() {
+        DockerizorExtension uut = new DockerizorExtension (
+                virgoVersion:'3.7.0.RELEASE',
+                virgoFlavour:'VK'
+                )
+
+        assertThat(uut.downloadUrl, containsString("VK"));
         assertThat(uut.downloadUrl, containsString("release"));
     }
 }

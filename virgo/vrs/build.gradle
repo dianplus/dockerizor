@@ -1,6 +1,6 @@
 dockerizor {
     description = 'Virgo RAP Server'
-    repository = "eclipsesource/virgo-rap-server"
+    repository = "dianplus/virgo-rap-server"
 
 	virgoFlavour = 'VRS'
 

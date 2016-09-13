@@ -1,4 +1,4 @@
-## Virgo Jetty Server
+## Virgo Kernel
 
 [Virgo][Virgo] from [EclipseRT][EclipseRT] is a completely module-based Java application server that is designed to run enterprise Java applications and Spring-powered applications with a high degree of flexibility and reliability. It offers a simple yet comprehensive platform to develop, deploy, and service enterprise Java applications.
 
@@ -7,7 +7,7 @@
 To create an application based on this image you can simply drop your application into the ``pickup`` folder.
 The following Dockerfile would add your application bundle to the Docker container:
 
-	FROM dianplus/virgo-jetty-server
+	FROM dianplus/virgo-kernel
 
 	ADD my-app.jar /home/virgo/pickup/
 
@@ -17,9 +17,9 @@ Change into the directory that contains your Dockerfile and build your image.
 
 # Running the Container
 
-The following command starts the Virgo Server for Apache Tomcat in a Docker container and exposes the port ``8080``.
+The following command starts the Virgo Kernel.
 
-    docker run -d --name="virgo-jetty-server" --publish=8080:8080 -t dianplus/virgo-jetty-server:latest
+    docker run -d --name="virgo-kernel" -t dianplus/virgo-kernel:latest
 
 # Accessing your Web Application
 
@@ -30,12 +30,12 @@ The context path of the application is specified in the OSGi metadata of your ap
 The Virgo container is built with [Dockerizer][Dockerizor]:
 
 	dockerizor {
-		virgoFlavour = 'VJS'
+		virgoFlavour = 'VK'
 		removeAdminConsole = true
 		removeSplash = true
 
 		virgoVersion = 'latest'
-		imageName = 'virgo-jetty-server'
+		imageName = 'virgo-kernel'
 	}
 
 *Note:* The Admin Console and the Splash screen have been removed from the container.

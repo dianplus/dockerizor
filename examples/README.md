@@ -44,5 +44,5 @@ The Virgo admin console is only available at the default HTTP port of Virgo when
 
   [Virgo]: http://eclipse.org/virgo
   [EclipseRT]: http://eclipse.org/rt
-  [Dockerizor]: https://github.com/eclipsesource/dockerizor
+  [Dockerizor]: https://github.com/dianplus/dockerizor
   [jax-rs-connector]: https://github.com/hstaudacher/osgi-jax-rs-connector

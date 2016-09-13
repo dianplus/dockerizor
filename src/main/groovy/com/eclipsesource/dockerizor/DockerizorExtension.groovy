@@ -37,6 +37,8 @@ class DockerizorExtension {
 
     String getShortName() {
         switch (virgoFlavour) {
+            case 'VK':
+                return "kernel"
             case 'VJS':
                 return "jetty-server"
             case 'VTS':
@@ -50,6 +52,13 @@ class DockerizorExtension {
 
     String getArchiveName() {
         switch (virgoFlavour) {
+            case 'VK':
+                switch (virgoVersion) {
+                    case 'latest':
+                    return "virgo-kernel-latest"
+                    default:
+                    return "virgo-kernel-${virgoVersion}.zip"
+                }
             case 'VJS':
                 switch (virgoVersion) {
                     case 'latest':
@@ -78,6 +87,7 @@ class DockerizorExtension {
 
     String getDownloadUrl() {
         switch (virgoFlavour) {
+            case 'VK':
             case 'VJS':
             case 'VTS':
                 switch (virgoVersion) {

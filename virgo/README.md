@@ -10,14 +10,14 @@ Please note: The following step acts on the assumption that you have a Docker da
 $ ./gradlew build dockerize
 ```
 
-This will create the Docker images ``eclipsesource/virgo-tomcat-server``, ``eclipsesource/virgo-jetty-server`` and ``eclipsesource/virgo-rap-server``.
+This will create the Docker images ``dianplus/virgo-tomcat-server``, ``dianplus/virgo-jetty-server``, ``dianplus/virgo-rap-server`` and ``dianplus/virgo-kernel``.
 
 ### Running the Container
 
 To start one of the previously dockerized Virgo runtimes:
 
 ```sh
-$ docker run -it --rm --name="virgo-tomcat-server" --publish=8080:8080 -t eclipsesource/virgo-tomcat-server:3.7.0.M03
+$ docker run -it --rm --name="virgo-tomcat-server" --publish=8080:8080 -t dianplus/virgo-tomcat-server:3.7.0.M03
 ```
 
 The command runs the ``virgo-tomcat-server`` in interactive mode and publishes the ports ``8080``.
@@ -28,4 +28,4 @@ Please note: The Virgo admin console has been disabled.
 
   [Virgo]: http://eclipse.org/virgo
   [EclipseRT]: http://eclipse.org/rt
-  [Dockerizor]: https://github.com/eclipsesource/dockerizor
+  [Dockerizor]: https://github.com/dianplus/dockerizor

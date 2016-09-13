@@ -1,7 +1,8 @@
 ext.virgoProjects = [
     project(':vts'),
     project(':vjs'),
-    project(':vrs')
+    project(':vrs'),
+    project(':vk')
 ]
 
 buildscript {
@@ -49,7 +50,7 @@ configure(virgoProjects) {
     apply plugin: 'com.eclipsesource.dockerizor'
 
     dockerizor {
-        maintainer = 'Florian Waibel <fwaibel@eclipsesource.com>'
+        maintainer = 'Canger <canger@dianjia.io>'
         tag = System.getenv("dockerizor.tag") ?: 'latest'
 
         createLocalCopy = System.properties['dockerizor.createLocalCopy'] ?: false

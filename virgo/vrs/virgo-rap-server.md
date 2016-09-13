@@ -7,7 +7,7 @@
 To create an application based on this image you can simply drop your application into the ``pickup`` folder.
 The following Dockerfile would add your application bundle to the Docker container:
 
-	FROM eclipsesource/virgo-rap-server
+	FROM dianplus/virgo-rap-server
 
 	ADD my-app.jar /home/virgo/pickup/
 
@@ -19,7 +19,7 @@ Change into the directory that contains your Dockerfile and build your image.
 
 The following command starts the Virgo RAP Server in a Docker container and exposes the port ``8080``.
 
-    docker run -d --name="virgo-rap-server" --publish=8080:8080 -t eclipsesource/virgo-rap-server:latest
+    docker run -d --name="virgo-rap-server" --publish=8080:8080 -t dianplus/virgo-rap-server:latest
 
 # Accessing your Web Application
 
@@ -42,4 +42,4 @@ The Virgo container is built with [Dockerizer][Dockerizor]:
 
   [Virgo]: http://eclipse.org/virgo
   [EclipseRT]: http://eclipse.org/rt
-  [Dockerizor]: https://github.com/eclipsesource/dockerizor
+  [Dockerizor]: https://github.com/dianplus/dockerizor

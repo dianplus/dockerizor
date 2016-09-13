@@ -30,8 +30,8 @@ group = 'com.eclipsesource.dockerizor'
 version = '0.8.1.BUILD-SNAPSHOT'
 
 pluginBundle {
-    website = 'https://github.com/eclipsesource/dockerizor'
-    vcsUrl = 'https://github.com/eclipsesource/dockerizor'
+    website = 'https://github.com/dianplus/dockerizor'
+    vcsUrl = 'https://github.com/dianplus/dockerizor'
     description = 'Gradle plug-in to create a Docker image that includes an Eclipse Virgo container'
     tags = ['virgo', 'docker']
 

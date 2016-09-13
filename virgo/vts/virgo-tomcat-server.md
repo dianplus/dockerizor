@@ -7,7 +7,7 @@
 To create an application based on this image you can simply drop your application into the ``pickup`` folder.
 The following Dockerfile would add your application bundle to the Docker container:
 
-	FROM eclipsesource/virgo-tomcat-server
+	FROM dianplus/virgo-tomcat-server
 
 	ADD my-app.jar /home/virgo/pickup/
 
@@ -19,7 +19,7 @@ Change into the directory that contains your Dockerfile and build your image.
 
 The following command starts the Virgo Server for Apache Tomcat in a Docker container and exposes the port ``8080``.
 
-    docker run -it --rm --name="virgo-tomcat-server" --publish=8080:8080 -t eclipsesource/virgo-tomcat-server:latest
+    docker run -it --rm --name="virgo-tomcat-server" --publish=8080:8080 -t dianplus/virgo-tomcat-server:latest
 
 # Accessing your Web Application
 
@@ -42,4 +42,4 @@ The Virgo container is built with [Dockerizer][Dockerizor]:
 
   [Virgo]: http://eclipse.org/virgo
   [EclipseRT]: http://eclipse.org/rt
-  [Dockerizor]: https://github.com/eclipsesource/dockerizor
+  [Dockerizor]: https://github.com/dianplus/dockerizor

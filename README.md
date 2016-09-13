@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/eclipsesource/dockerizor.svg)](https://travis-ci.org/eclipsesource/dockerizor)
+[![Build Status](https://travis-ci.org/dianplus/dockerizor.svg)](https://travis-ci.org/dianplus/dockerizor)
 
 dockerizor
 ==========
@@ -64,14 +64,15 @@ The snippet above creates a Docker image named 'virgo-jetty-server' with the Vir
 
 ```sh
 $ docker images | grep virgo-jetty-server
-eclipsesource/virgo-jetty-server   3.6.4.RELEASE       0f900c762dcf        5 minutes ago       332.7 MB
+dianplus/virgo-jetty-server   3.6.4.RELEASE       0f900c762dcf        5 minutes ago       332.7 MB
 ```
 
 The generated basic images for Virgo are available via [Docker Hub][dockerhub]:
 
- * Virgo Server for Apache Tomcat: https://registry.hub.docker.com/u/eclipsesource/virgo-tomcat-server/
- * Virgo Jetty Server: https://registry.hub.docker.com/u/eclipsesource/virgo-jetty-server/
- * Virgo RAP Server: https://registry.hub.docker.com/u/eclipsesource/virgo-rap-server/
+ * Virgo Server for Apache Tomcat: https://registry.hub.docker.com/u/dianplus/virgo-tomcat-server/
+ * Virgo Jetty Server: https://registry.hub.docker.com/u/dianplus/virgo-jetty-server/
+ * Virgo RAP Server: https://registry.hub.docker.com/u/dianplus/virgo-rap-server/
+ * Virgo Kernel: https://registry.hub.docker.com/u/dianplus/virgo-kernel/
 
 [Virgo]: http://www.eclipse.org/virgo/ "Virgo"
 [dockerhub]: https://hub.docker.com/ "Docker Hub"

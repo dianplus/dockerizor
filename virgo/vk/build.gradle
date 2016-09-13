@@ -1,0 +1,6 @@
+dockerizor {
+    description = 'Virgo Kernel'
+    repository = "dianplus/virgo-kernel"
+    
+	virgoFlavour = 'VK'
+}
