@@ -88,6 +88,14 @@ class DockerizorExtension {
     String getDownloadUrl() {
         switch (virgoFlavour) {
             case 'VK':
+                switch (virgoVersion) {
+                    case 'latest':
+                    return "https://hudson.eclipse.org/virgo/job/${hudsonJobName}/lastSuccessfulBuild/artifact/packaging/${shortName}/build/distributions/${archiveName}.zip"
+                    case ~/.*M\d{2}/:
+                    return "http://www.eclipse.org/downloads/download.php?file=/virgo/milestone/${virgoFlavour}/${archiveName}&mirror_id=580&r=1"
+                    default:
+                    return "http://www.eclipse.org/downloads/download.php?file=/virgo/release/VP/${virgoVersion}/${archiveName}&mirror_id=580&r=1"
+                }
             case 'VJS':
             case 'VTS':
                 switch (virgoVersion) {
